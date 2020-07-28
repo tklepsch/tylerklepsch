@@ -1,0 +1,10 @@
+.BackgroundExterior {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.BackgroundInterior {
+  background: white;
+  padding: 1.25rem;
+}
