@@ -1,0 +1,15 @@
+.title,
+.text {
+  color: #3d3d3d;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.text {
+  max-width: 686px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}

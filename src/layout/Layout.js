@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UnderConstruction from '../pages/UnderConstruction/UnderConstruction';
-import classes from './Layout.css';
+import Home from '../pages/Home/Home';
+import classes from './Layout.module.css';
 
 class Layout extends Component {
   state = {
@@ -11,7 +11,7 @@ class Layout extends Component {
     return (
       <div className={classes.BackgroundExterior}>
         <div className={classes.BackgroundInterior}>
-          <UnderConstruction />
+          <Home />
         </div>
       </div>
     )
