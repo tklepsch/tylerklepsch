@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   background: #0B5D70;
-  height: 100%;
+  height: calc(100vh - 40px);
   padding: 1.25rem;
 }
 
@@ -13,5 +13,5 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
