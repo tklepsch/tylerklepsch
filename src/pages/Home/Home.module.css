@@ -1,6 +1,14 @@
-.homeContainer {
-  padding-left: 50px;
+.pageContainer {
+  width: 100%;
+  padding: 3rem;
   text-align: left;
+}
+
+.pageSingleButton {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 100px;
+  align-items: center;
 }
 
 .title,
