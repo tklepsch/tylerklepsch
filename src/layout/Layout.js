@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Home from '../pages/Home/Home';
 import Header from '../components/Header/Header';
 import classes from './Layout.module.css';
 
@@ -14,9 +13,10 @@ class Layout extends Component {
 
         <div className={classes.BackgroundInterior}>
           <Header />
-          <div className={classes.Content}>
-            <Home />
-          </div>
+          
+          <main className={classes.Content}>
+            {this.props.children}
+          </main>
         </div>
       </div>
     )

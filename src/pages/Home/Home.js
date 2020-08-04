@@ -15,9 +15,6 @@ const Home = () => (
       <NextPage link="/" exact>About Me</NextPage>  
     </div>
   </Aux>
-
-
-)
-
+);
 
 export default Home;
