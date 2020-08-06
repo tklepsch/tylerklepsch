@@ -9,7 +9,7 @@ const contact = () => (
     <PrevPage link="/about-me" exact>About Me</PrevPage> 
     <div className='container__main-content'>
       <h1>Contact Me</h1>
-      <p>Submit the form below and I'll recieve an email with the information provided.</p>
+      <p>Want to have a chat with me? Submit the form below and I'll receive an email with the information provided.</p>
       <ContactForm />
     </div>
     <NextPage link="/blog" exact>Blog</NextPage>     
