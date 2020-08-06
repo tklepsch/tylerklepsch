@@ -1,11 +1,21 @@
 import React from 'react';
 
-import Aux from '../../hoc/Aux/aux';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import NextPage from '../../components/NextPage/NextPage';
+import PrevPage from '../../components/PrevPage/PrevPage';
 
-const Contact = () => (
-  <Aux>
-    Contact Me Page
-  </Aux>
+const contact = () => (
+  <div className='pageContainer three-col'>
+    <PrevPage link="/about-me" exact>About Me</PrevPage> 
+    <div className='container__main-content'>
+      <h1>Contact Me</h1>
+      <p>Submit the form below and I'll recieve an email with the information provided.</p>
+      <ContactForm />
+    </div>
+    <NextPage link="/blog" exact>Blog</NextPage>     
+  </div>
+
+  
 );
 
-export default Contact;
+export default contact;

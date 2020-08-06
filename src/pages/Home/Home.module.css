@@ -1,33 +1,6 @@
-.pageContainer {
-  width: 100%;
-  padding: 3rem;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.pageSingleButton {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 100px;
-  align-items: center;
-}
-
 .title,
 .text {
   color: #3d3d3d;
-}
-
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.text {
-  max-width: 686px;
-  font-family: 'Cabin', sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5;
 }
 
 .link {
