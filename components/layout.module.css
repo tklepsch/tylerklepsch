@@ -1,0 +1,26 @@
+.BackgroundExterior {
+  position: relative;
+  z-index: 1;
+  background: #0B5D70;
+  height: 100%;
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.BackgroundInterior {
+  position: relative;
+  z-index: 2;
+  background: white;
+  height: 100%;
+  overflow: auto;
+  flex: 1;
+}
+
+.Content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}

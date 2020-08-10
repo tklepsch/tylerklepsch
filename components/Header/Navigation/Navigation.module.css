@@ -1,0 +1,48 @@
+.MenuBtn {
+  display: none;
+  position: relative;
+  z-index: 101;
+}
+
+.Navigation {
+  display: inline-block;
+}
+
+.NavigationItems {
+  width: 100%;
+  list-style: none;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .MenuBtn {
+    display: block;
+  }
+
+  .Navigation {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .Navigation.ShowMenu {
+    display: block;
+  }
+
+  .Navigation.HideMenu {
+    display: none;
+  }
+
+  .NavigationItems {
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

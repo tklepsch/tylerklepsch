@@ -1,0 +1,45 @@
+.Navigation {
+  display: inline-block;
+}
+
+.NavigationItem {
+  display: inline-block;
+  padding: 0 1.5rem;
+}
+
+.NavigationItem:first-of-type{
+  padding-left: 0;
+}
+
+.NavigationItem:last-of-type{
+  padding-right: 0;
+}
+
+.NavLink{
+  color: #0B5D70;
+  text-decoration: none;
+}
+
+.NavLink:visited {
+  color: #3D3D3D;
+}
+
+.NavLink:active{
+  color: #EDBE51;
+}
+
+.NavLink:hover,
+.NavLink:focus {
+  color: #3D3D3D;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .NavigationItem {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+  }
+}
