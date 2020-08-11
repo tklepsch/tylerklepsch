@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Layout from '../../components/layout'
 import Date from  '../../components/Date/Date'
 import utilityStyles from '../../styles/utilities.module.css'
+import markdownStyles from '../../styles/markdown.module.css'
 import styles from './post.module.css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
@@ -18,7 +19,7 @@ export default function Post({ postData }) {
         </div>
         <h1>{postData.title}</h1>
         <Date dateString={postData.date} />
-        <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <article className={markdownStyles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
       <Link href="/blog"><a className={utilityStyles.PrevPageBtn}>Back to Blog</a></Link> 
     </Layout>

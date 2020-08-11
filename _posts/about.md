@@ -18,7 +18,7 @@ So, if you were to clean your house, then you would say limit each room to 10 mi
 
 Another example I've found is in this video by a youtuber called the [WheezyWaiter](https://www.youtube.com/channel/UCQL5ABUvwY7YoW5lgMyAS_w).
 
-Embed youtube video here: https://www.youtube.com/watch?v=5bVMkduWDGY
+[![Wheezy Waiter video about how to stop procrastinating with the 10 minute rule](https://img.youtube.com/vi/5bVMkduWDGY/0.jpg)](https://www.youtube.com/watch?v=5bVMkduWDGY)
 
 In the video, his approach to the 10 minute rule is to have a general to-do task spread out through multiple days. And he was able to get the following done within 7 days:
 - Came up with an outline for a book.
