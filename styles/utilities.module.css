@@ -59,3 +59,8 @@
     left: 2.5rem;
   }
 }
+
+.highlight {
+  background-color: #EDBE51;
+  padding: 0 2px;
+}

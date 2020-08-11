@@ -9,6 +9,21 @@
   flex-direction: column;
 }
 
+.left-padding {
+  padding-right: 0;
+}
+.right-padding {
+  padding-left: 0;
+}
+.no-side-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.BackgroundPadding {
+  padding-right: 0;
+}
+
 .BackgroundInterior {
   position: relative;
   z-index: 2;
