@@ -249,8 +249,7 @@ ol {
   margin-bottom: 0.5rem;
 }
 
-a,
-a:link {
+a {
   color: #0B5D70;
   font-weight: bold;
   text-decoration: none;
