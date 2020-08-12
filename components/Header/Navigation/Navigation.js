@@ -28,7 +28,10 @@ class Navigation extends Component {
         <button 
           className={classes.MenuBtn}
           onClick={this.menuHandler}>
-          Show Navigation Menu
+            <svg width="65" height="34" viewBox="0 0 65 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 2H65M0 16.5H65M0 31.5H65" stroke="#3D3D3D" stroke-width="4"/>
+            </svg>
+          <span>Menu</span>
         </button>
         <nav className={`${classes.Navigation} ${navClasses.join(' ')}`}>
           <ul className={classes.NavigationItems}>

@@ -18,6 +18,7 @@ export default function Blog ({allPostsData}) {
               key={id}
               className={styles.BlogPost}>
               {
+                // If no image provided, don't print.
                 mainImage ? <div className={styles.BlogPostThumbnail}><img src={mainImage} alt={imageAlt} /></div> : null             
               }
 
