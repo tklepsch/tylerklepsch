@@ -1,3 +1,10 @@
+.Label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .InputElement {
   width: 100%;
   padding: 10px;

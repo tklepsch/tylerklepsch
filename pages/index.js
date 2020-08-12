@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import styles from './index.module.css'
-import utilityStyles from '../styles/utilities.module.css';
+import utilityStyles from '../styles/pagebtn.module.css';
 
 export default function Home() {
   return (

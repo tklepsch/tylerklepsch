@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Input from '../UI/Input/Input';
 import SubmitButton from '../UI/SubmitButton/SubmitButton';
-import classes from './ContactForm.module.css';
+import classes from '../../styles/form.module.css';
 
 
 /*

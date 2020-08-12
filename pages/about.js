@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Link from 'next/link';
-import utilityStyles from '../styles/utilities.module.css';
+import utilityStyles from '../styles/pagebtn.module.css';
 
 export default function about() {
   return (

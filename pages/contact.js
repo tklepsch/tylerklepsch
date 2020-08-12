@@ -2,7 +2,7 @@ import Layout from '../components/layout'
 import Link from 'next/link'
 
 import ContactForm from '../components/ContactForm/ContactForm';
-import utilityStyles from '../styles/utilities.module.css';
+import utilityStyles from '../styles/pagebtn.module.css';
 
 const contact = () => (
   <Layout columnType="three-col" backgroundPaddingtype="no-side-padding">

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Layout from '../../components/layout'
 import Date from  '../../components/Date/Date'
-import utilityStyles from '../../styles/utilities.module.css'
+import pageBtnStyles from '../../styles/pagebtn.module.css'
 import markdownStyles from '../../styles/markdown.module.css'
 import styles from './post.module.css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
@@ -21,7 +21,10 @@ export default function Post({ postData }) {
         <Date dateString={postData.date} />
         <article className={markdownStyles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
-      <Link href="/blog"><a className={utilityStyles.PrevPageBtn}>Back to Blog</a></Link> 
+      <aside className={pageBtnStyles.BtnContainer}>
+        <Link href="/blog"><a className={pageBtnStyles.PrevPageBtn}>Back to Blog</a></Link>         
+      </aside>
+
     </Layout>
   )
 }

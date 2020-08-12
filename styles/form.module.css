@@ -1,0 +1,23 @@
+/* Form Styles */
+.FormContainer {
+  margin: 2rem 0;
+}
+
+.form__submit {
+  text-align: right;
+}
+
+.form__input,
+.form__textarea {
+  margin: 2rem 0;
+}
+
+.form__input:first-of-type,
+.form__textarea:first-of-type {
+  margin-top: 0;
+}
+
+.form__input:last-of-type,
+.form__textarea:last-of-type {
+  margin-bottom: 0;
+}

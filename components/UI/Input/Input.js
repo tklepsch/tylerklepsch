@@ -33,8 +33,11 @@ const input = ( props ) => {
     case ('textarea'):
       inputElement = (
         <div className={`form__${props.elementType} ${classes.Input}`}>
-          <label htmlFor={props.elementConfig.label}>{props.elementConfig.label}</label>
-          <textarea 
+          <label 
+            htmlFor={props.elementConfig.label} 
+            className={classes.Label}>{props.elementConfig.label}</label>
+          <textarea
+            rows="5"
             className={inputClasses.join(' ')} 
             {...props.elementConfig} 
             value={props.value}
@@ -46,6 +49,9 @@ const input = ( props ) => {
     default:
       inputElement = (
         <div className={`form__${props.elementType} ${classes.Input}`}>
+          <label 
+            htmlFor={props.elementConfig.label} 
+            className={classes.Label}>{props.elementConfig.label}</label>
           <input 
           className={inputClasses.join(' ')} 
           {...props.elementConfig}
