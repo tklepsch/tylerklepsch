@@ -15,13 +15,11 @@
   padding-right: 0;
 }
 
-.NavLink{
+.NavLink:link,
+.NavLink:visited{
   color: #0B5D70;
   text-decoration: none;
-}
-
-.NavLink:visited {
-  color: #3D3D3D;
+  border-bottom-color: transparent;
 }
 
 .NavLink:active{
@@ -31,7 +29,8 @@
 .NavLink:hover,
 .NavLink:focus {
   color: #3D3D3D;
-  text-decoration: underline;
+  background: none;
+  border-bottom-color: #3D3D3D;
 }
 
 @media (max-width: 768px) {

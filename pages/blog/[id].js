@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Layout from '../../components/layout'
 import Date from  '../../components/Date/Date'
 import pageBtnStyles from '../../styles/pagebtn.module.css'
-import markdownStyles from '../../styles/markdown.module.css'
 import styles from './post.module.css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
@@ -17,9 +16,9 @@ export default function Post({ postData }) {
         <div className={styles.MainImage}>
           <img src={postData.mainImage} alt={postData.imageAlt} />
         </div>
-        <h1>{postData.title}</h1>
-        <Date dateString={postData.date} />
-        <article className={markdownStyles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <h1 className={styles.PostTitle}>{postData.title}</h1>
+        <Date dateString={postData.date} className={styles.Date} />
+        <article className={styles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
       <aside className={pageBtnStyles.BtnContainer}>
         <Link href="/blog"><a className={pageBtnStyles.PrevPageBtn}>Back to Blog</a></Link>         

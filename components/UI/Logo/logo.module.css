@@ -1,0 +1,71 @@
+.T {
+  fill: #FFF;
+}
+
+.K {
+  fill: #0B5D70;
+}
+
+.Logo {
+  display: block;
+  transition: fill .4s ease;
+}
+
+.LogoLink:link,
+.LogoLink:visited {
+  display: block;
+  margin-bottom: 0;
+  line-height: 0;
+  text-decoration: underline;
+  border-bottom: none;
+  background: transparent;
+}
+
+.LogoLink:hover,
+.LogoLink:focus {
+  text-decoration: underline;
+  border-bottom: none;
+  background: none;
+}
+
+/* .LogoLink:focus {
+  border: 1px solid #EDBE51;
+  box-shadow: 0px 0px 4px #EDBE51;
+} */
+
+.Tfill,
+.Tpath,
+.Kfill,
+.Kpath {
+  transition: all .4s ease;
+}
+
+.Tfill,
+.Kpath  {
+  fill: #FFF;
+}
+
+.Tpath,
+.Kfill  {
+  fill: #0B5D70;
+}
+
+.LogoLink:hover .Tfill,
+.LogoLink:focus .Tfill {
+  transform: translate(55px);
+}
+
+.LogoLink:hover .Kfill,
+.LogoLink:focus .Kfill {
+  transform: translate(-55px);
+}
+
+.LogoLink:hover .Tpath,
+.LogoLink:focus .Tpath {
+  fill: #FFF;
+}
+
+.LogoLink:hover .Kpath,
+.LogoLink:focus .Kpath {
+  fill: #0B5D70;
+}

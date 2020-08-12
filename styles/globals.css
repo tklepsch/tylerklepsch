@@ -297,6 +297,20 @@ a:hover::-moz-selection {
   background: #3D3D3D; /* Gecko Browsers */
 }
 
+.no-link-style:link,
+.no-link-style:visited {
+  text-decoration: underline;
+  border-bottom: none;
+  background: transparent;
+}
+
+.no-link-style:hover,
+.no-link-style:focus {
+  text-decoration: underline;
+  border-bottom: none;
+  background: none;
+}
+
 blockquote {
   border-left: 4px solid #0B5D70;
   padding: 0.75rem 0 0.125rem 2rem; 

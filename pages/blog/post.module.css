@@ -1,4 +1,21 @@
-.MainImage{
+.MarkdownContainer {
+  margin: 2rem auto;
+}
+
+.MarkdownContainer img{
+  margin: 1rem auto;
+}
+
+.MainImage {
   width: 100%;
   margin: 0 auto;
+}
+
+.PostTitle {
+  margin-bottom: 0;
+}
+
+.Date {
+  font-size: 0.875rem;
+  margin-bottom: 1rem 0;
 }
