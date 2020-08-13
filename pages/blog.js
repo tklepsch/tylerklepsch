@@ -1,25 +1,24 @@
 import Link from 'next/link'
 import Date from '../components/Date/Date'
 import Layout from '../components/layout'
-import utilityStyles from '../styles/pagebtn.module.css'
+import pageBtnStyles from '../styles/pagebtn.module.css'
 import styles from './blog.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
 
 export default function Blog ({allPostsData}) {
   return (
-    <Layout columnType="two-col" backgroundPaddingtype="no-side-padding">
-      <Link href="/contact"><a className={utilityStyles.PrevPageBtn}>Contact</a></Link> 
-      <article>
+    <Layout columnType="one-col mid-width" backgroundPaddingtype="no-side-padding">
+      <article className='container__main-content'>
         <h1>What's been on my mind?</h1>
         <ul className={styles.BlogContainer}>
-          {allPostsData.map(({ id, mainImage, imageAlt, date, title, excerpt }) => (
+          {allPostsData.map(({ id, thumbnail, mainImage, imageAlt, date, title, excerpt }) => (
             <li 
               key={id}
               className={styles.BlogPost}>
               {
                 // If no image provided, don't print.
-                mainImage ? <div className={styles.BlogPostThumbnail}><img src={mainImage} alt={imageAlt} /></div> : null             
+                thumbnail ? <div className={styles.BlogPostThumbnail}><img src={thumbnail} alt={imageAlt} /></div> : null             
               }
 
               <div className={styles.BlogPostPreview}>
@@ -43,6 +42,10 @@ export default function Blog ({allPostsData}) {
           ))}
         </ul>
       </article>
+      <aside className={pageBtnStyles.BtnContainer}>
+        <Link href="/contact"><a className={pageBtnStyles.PrevPageBtn}>Contact</a></Link>         
+      </aside>
+
     </Layout>
   )
 }

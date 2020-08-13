@@ -13,11 +13,10 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <main>
-        <div className={styles.MainImage}>
-          <img src={postData.mainImage} alt={postData.imageAlt} />
-        </div>
         <h1 className={styles.PostTitle}>{postData.title}</h1>
         <Date dateString={postData.date} className={styles.Date} />
+        {postData.mainImage ? <div className={styles.MainImage}>
+          <img src={postData.mainImage} alt={postData.imageAlt} /></div> : null}
         <article className={styles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
       <aside className={pageBtnStyles.BtnContainer}>

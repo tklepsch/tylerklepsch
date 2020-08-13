@@ -1,5 +1,6 @@
 ---
-mainImage: '/images/blog/detroit-become-human/detroit-become-human-main-characters.png'
+thumbnail: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/t_blog-thumbnail/v1597257261/blog-images/detroit-become-human-main-characters_zwdcyv.png'
+mainImage: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257261/blog-images/detroit-become-human-main-characters_zwdcyv.png'
 imageAlt: 'Connor, Markus, and Kara from the game Detroit Become Human'
 title: 'Why you should play Detroit Become Human'
 date: '2020-06-01'
@@ -16,7 +17,7 @@ You play as three different androids (Connor, Markus, and Kara) and play out the
 
 You have Connor, the detective android sent by the corporation that created all androids to investigate the recent incidents of Androids bypassing their programming. Kara, an android who becomes sentient and is on the run after protecting a little girl from her abusive owner. And Markus, an android that becomes sentient and gets thrust into the forefront of the revolution.
 
-![The characters Kara and Alice hugging](/images/blog/detroit-become-human/kara-and-alice.jpg "The characters Kara and Alice hugging")
+![The characters Kara and Alice hugging](https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257263/blog-images/kara-and-alice_rndfve.jpg "The characters Kara and Alice hugging")
 
 Like past Quantic Dreams games Heavy Rain and Indigo Prophecy, you progress through many different paths for each story. These paths are determined by your dialogue chooses, performance at the quick time events, and how well you do in your investigation of the environments.
 
@@ -24,7 +25,7 @@ And it shows. I recall reading somewhere that there are 40+ possible variations 
 
 Even with that, there are still some unexplored variations I have yet to see.
 
-![Markus](/images/blog/detroit-become-human/markus.jpg "Markus")
+![Markus](https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257265/blog-images/markus_zonwcx.jpg "Markus")
 
 
 I wont spoil too much what happened story wise, but my first play through was the most eye-opening of these possibilities. I decided to play my characters very specifically, rather than what I’d do in the situation. Unfortunately this meant one of my characters got killed off early on and I saw first hand the repercussions of that.
@@ -35,7 +36,7 @@ I also learned via the game’s global choice tracker that very few people went 
 
 And so, then I begun my replaying of the game. Trying to build out scenarios such as the best and worst possible endings, endings with specific characters, or just trying out scenarios where the population hates or loves you and how that affects your characters (it really really does).
 
-![Connor Gameplay: Connor investigating a body for clues](/images/blog/detroit-become-human/connor-gameplay.jpg)
+![Connor Gameplay: Connor investigating a body for clues](https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257259/blog-images/connor-gameplay_dgnqtp.jpg)
 
 I’d at least recommending playing through the game with a friend or watching someone play through the game. At the very least you get an entertaining movie out of it.
 

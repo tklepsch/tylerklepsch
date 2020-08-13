@@ -1,4 +1,5 @@
 ---
+thumbnail: 'images/placeholder.png'
 title: 'Chilling out to that Lo-fi music '
 date: '2020-06-21'
 excerpt: 'Just sit back, relax, and enjoy the Lo-fi while reading about lo-fi music.'

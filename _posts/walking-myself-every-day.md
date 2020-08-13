@@ -1,5 +1,6 @@
 ---
-mainImage: '/images/blog/walking-myself.jpg'
+thumbnail: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/t_blog-thumbnail/v1597257186/blog-images/walking-myself_gqiwlh.jpg'
+mainImage: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257186/blog-images/walking-myself_gqiwlh.jpg'
 imageAlt: 'Walking on a lane of sunshine, on a jetty, on planks. Photo by Frank Busch on Unsplash.'
 title: 'Walking myself every day'
 date: '2020-05-23'

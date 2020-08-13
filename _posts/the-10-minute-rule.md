@@ -1,5 +1,6 @@
 ---
-mainImage: '/images/blog/timer.jpg'
+thumbnail: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/t_blog-thumbnail/v1597257034/blog-images/timer_pprcqf.jpg'
+mainImage: 'https://res.cloudinary.com/dgjzbzbt6/image/upload/v1597257034/blog-images/timer_pprcqf.jpg'
 imageAlt: 'Stop watch showing the clock hand just after the 10 minute mark.'
 title: 'The 10 minute rule'
 date: '2020-05-18'

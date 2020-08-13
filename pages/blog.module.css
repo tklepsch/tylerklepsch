@@ -8,8 +8,18 @@
 }
 
 .BlogPostThumbnail {
+  width: 100%;
   max-width: 225px;
   margin-right: 2rem;
+  flex: 0 1 40%;
+}
+
+.BlogPostPreview {
+  flex: 0 1 60%;
+}
+
+.BlogPostThumbnail img {
+  width: 100%;
 }
 
 .BlogPostLink {
@@ -41,8 +51,11 @@
   }
 
   .BlogPostThumbnail {
-    max-width: none;
     margin: 0 auto 0.5rem;
+  }
+
+  .BlogPostThumbnail img {
+    width: 100%;
   }
 
   .BlogPostLink {
@@ -56,6 +69,7 @@
 
 @media (max-width: 968px) {
   .BlogPostThumbnail {
+    width: 100%;
     max-width: none;
     margin: 0 auto 0.5rem;
   }

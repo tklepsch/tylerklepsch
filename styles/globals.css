@@ -128,6 +128,19 @@ pre {
  * Container Classes
  */
 
+section {
+  margin: 3rem 0;
+}
+
+section:first-of-type {
+  margin-top: 0;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+
 .pageContainer {
   width: 100%;
   padding: 0 3rem 12rem;
@@ -171,7 +184,7 @@ pre {
   }
 
   .container__main-content {
-    margin: 0 auto 2rem;
+    margin: 2rem auto;
   }
 }
 
@@ -192,21 +205,23 @@ h5,
 h6 {
   color: #0b5d70;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
 h1,
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 1.75rem;
+  font-weight: bold;
 }
 
 h3 {
+  color: #3D3D3D;
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
 }
@@ -319,7 +334,7 @@ blockquote {
 
 .form__input,
 .form__textarea {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .form__input:first-of-type,
