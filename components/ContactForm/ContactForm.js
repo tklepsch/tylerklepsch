@@ -21,7 +21,7 @@ class ContactForm extends Component {
         elementConfig: {
           type: 'text',
           label: 'Name',
-          placeholder: 'Jonathon Joestar',
+          placeholder: 'John Jane',
         },
         value: '',
         validation: {
@@ -35,7 +35,7 @@ class ContactForm extends Component {
         elementConfig: {
           type: 'text',
           label: 'Subject',
-          placeholder: 'Who is your favourite Joestar?',
+          placeholder: 'Lets talk about your website',
         },
         value: '',
         validation: {
@@ -49,7 +49,7 @@ class ContactForm extends Component {
         elementConfig: {
           type: 'textarea',
           label: 'Comment',
-          placeholder: 'There is no wrong answer, but...',
+          placeholder: 'It\'s great!',
         },
         value: '',
         validation: {
@@ -81,17 +81,21 @@ class ContactForm extends Component {
     return isValid;
   }
 
-  submitHandler = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-t", ...this.state })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+  /*
+   * Not needed. Netlify will handle it.
+   */
 
-    e.preventDefault();
-  }
+  // submitHandler = (e) => {
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact-tyler", ...this.state })
+  //   })
+  //     .then(() => alert("Success!"))
+  //     .catch(error => alert(error));
+
+  //   e.preventDefault();
+  // }
 
   inputChangedHandler = (event, inputIdentifier) => {
     // Copy of current form data top level.
@@ -140,13 +144,13 @@ class ContactForm extends Component {
     /* Create a new array of input elements by mapping our contactForm state array. */
     let form = (
       <form 
-        name="contact-t"
-        method="post" 
+        name="contact-tyler"
+        method="POST"
+        action="/message-sent"
         className={classes.Form}
-        netlify 
-        netlify-honeypot="bot-field"
-        onSubmit={this.handleSubmit}>
-        <input type="hidden" name="form-name" value="contact-t" />
+        netlift
+        netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact-tyler" />
         {formElementsArray.map(formElement => (
           <Input 
             key={formElement.id}
