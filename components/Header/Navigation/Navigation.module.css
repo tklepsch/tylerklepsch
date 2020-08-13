@@ -36,23 +36,23 @@
   }
 
   .Navigation {
-    display: none;
     width: 100%;
-    height: calc(100vh - 116px);
+    height: calc(100vh - 20px);
     position: absolute;
-    top: 100px;
+    top: 20px;
     left: 0;
     z-index: 100;
     overflow: hidden;
-    border-bottom: 16px solid #0B5D70;
+    border-bottom: 20px solid #0B5D70;
+    transition: all 0.3s;
   }
 
   .Navigation.ShowMenu {
-    display: block;
+    animation: openMobileNavigation 0.5s ease-in-out forwards;
   }
 
   .Navigation.HideMenu {
-    display: none;
+    animation: closeMobileNavigation 0.5s ease-in-out forwards;
   }
 
   .NavigationItems {
@@ -62,5 +62,39 @@
     list-style: none;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+@keyframes openMobileNavigation {
+  0% {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeMobileNavigation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-70%);
   }
 }
