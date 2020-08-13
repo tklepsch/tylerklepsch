@@ -161,7 +161,7 @@ class ContactForm extends Component {
           method="POST"
           action="/message-sent"
           className={classes.Form}
-          netlify>
+          data-netlify="true">
           <input type="hidden" name="form-name" value="contactTyler" />
 
           {formItems}
