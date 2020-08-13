@@ -132,49 +132,47 @@ class ContactForm extends Component {
 
 
   render () {
-    const formElementsArray = [];
+    let formElementsArray = [];
 
     for (let key in this.state.contactInfo) {
       formElementsArray.push({
         id: key,
-        config: this.state.contactInfo[key],
+        config: this.state.contactInfo[key]
       });
     }
 
     /* Create a new array of input elements by mapping our contactForm state array. */
-    let form = (
-      <form 
-        name="contact-tyler"
-        method="POST"
-        action="/message-sent"
-        className={classes.Form}
-        netlify
-        netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact-tyler" />
-        {formElementsArray.map(formElement => (
-          <Input 
-            key={formElement.id}
-            elementType={formElement.config.elementType}
-            elementConfig={formElement.config.elementConfig}
-            value={formElement.config.value}
-            invalid={!formElement.config.valid}
-            shouldValidate={formElement.config.validation}
-            touched={formElement.config.touched}
-            changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
-        ))}
-        <div className={classes.form__submit}>
-          <SubmitButton 
-            btnType="form-submit" 
-            type="submit"
-            disabled={!this.state.formIsValid}>Submit</SubmitButton>          
-        </div>
-
-      </form>
-    );
+    let formItems = formElementsArray.map(formElement => (
+        <Input 
+          key={formElement.id}
+          elementType={formElement.config.elementType}
+          elementConfig={formElement.config.elementConfig}
+          value={formElement.config.value}
+          invalid={!formElement.config.valid}
+          shouldValidate={formElement.config.validation}
+          touched={formElement.config.touched}
+          changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
+      ));
 
     return (
       <div className={classes.FormContainer}>
-        {form}
+        <form 
+          name="contactTyler"
+          method="POST"
+          action="/message-sent"
+          className={classes.Form}
+          netlify>
+          <input type="hidden" name="form-name" value="contactTyler" />
+
+          {formItems}
+
+          <div className={classes.form__submit}>
+            <SubmitButton 
+              btnType="form-submit" 
+              type="submit"
+              disabled={!this.state.formIsValid}>Submit</SubmitButton>          
+          </div>
+        </form>
       </div>
     )
   }
