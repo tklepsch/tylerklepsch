@@ -150,7 +150,7 @@ class ContactForm extends Component {
         className={classes.Form}
         netlify
         netlify-honeypot="bot-field">
-        <input type="hidden" name="contact-tyler" value="contact-tyler" />
+        <input type="hidden" name="form-name" value="contact-tyler" />
         {formElementsArray.map(formElement => (
           <Input 
             key={formElement.id}
