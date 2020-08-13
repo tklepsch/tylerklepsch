@@ -148,7 +148,7 @@ class ContactForm extends Component {
         method="POST"
         action="/message-sent"
         className={classes.Form}
-        netlift
+        netlify
         netlify-honeypot="bot-field">
         <input type="hidden" name="contact-tyler" value="contact-tyler" />
         {formElementsArray.map(formElement => (
