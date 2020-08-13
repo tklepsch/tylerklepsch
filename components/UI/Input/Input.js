@@ -22,6 +22,7 @@ const input = ( props ) => {
             htmlFor={props.elementConfig.label} 
             className={classes.Label}>{props.elementConfig.label}</label>
           <input 
+            name={props.elementConfig.label}
             className={inputClasses.join(' ')} 
             {...props.elementConfig}
             value={props.value}
@@ -37,6 +38,7 @@ const input = ( props ) => {
             htmlFor={props.elementConfig.label} 
             className={classes.Label}>{props.elementConfig.label}</label>
           <textarea
+            name={props.elementConfig.label}
             rows="5"
             className={inputClasses.join(' ')} 
             {...props.elementConfig} 
