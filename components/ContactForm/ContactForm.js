@@ -165,7 +165,7 @@ class ContactForm extends Component {
         <div className={classes.form__submit}>
           <SubmitButton 
             btnType="form-submit" 
-            clicked={this.submitHandler}
+            type="submit"
             disabled={!this.state.formIsValid}>Submit</SubmitButton>          
         </div>
 
