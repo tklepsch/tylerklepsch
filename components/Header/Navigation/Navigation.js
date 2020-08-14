@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CSSTransition from "react-transition-group/CSSTransition"
 
 import classes from './Navigation.module.css';
 import Aux from '../../hoc/Aux/aux';
@@ -6,7 +7,7 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 class Navigation extends Component {
   state = {
-    showMenu: true
+    showMenu: false
   }
 
   menuHandler = () => {
@@ -15,31 +16,39 @@ class Navigation extends Component {
   };
 
   render () {
-    const navClasses = [];
-
-    if (this.state.showMenu) {
-      navClasses.push(classes.HideMenu);
-    } else {
-      navClasses.push(classes.ShowMenu);
+  
+    const timing = {
+      enter: 300,
+      exit: 300
     }
 
     return (
       <Aux>
         <button 
           className={classes.MenuBtn}
-          onClick={this.menuHandler}>
+          onClick={() => this.setState(prevState  => ({showMenu: !prevState.showMenu}))}>
             <svg width="65" height="34" viewBox="0 0 65 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 2H65M0 16.5H65M0 31.5H65" stroke="#3D3D3D" stroke-width="4"/>
+              <path d="M0 2H65M0 16.5H65M0 31.5H65" stroke="#3D3D3D" strokeWidth="4"/>
             </svg>
           <span>Menu</span>
         </button>
-        <nav className={`${classes.Navigation} ${navClasses.join(' ')}`}>
-          <ul className={classes.NavigationItems}>
-            <NavigationItem link="/about">About Me</NavigationItem>
-            <NavigationItem link="/contact">Contact</NavigationItem>
-            <NavigationItem link="/blog">Blog</NavigationItem>
-          </ul>        
-        </nav>        
+        <CSSTransition
+          in={this.state.showMenu}
+          timeout={timing}
+          classNames={{
+            enterActive: classes.ShowMenu,
+            enterDone: classes.MenuShown,
+            exit: classes.HideMenu,
+            exitDone: classes.MenuHidden
+          }}>
+          <nav className={classes.Navigation}>
+            <ul className={classes.NavigationItems}>
+              <NavigationItem link="/about">About Me</NavigationItem>
+              <NavigationItem link="/contact">Contact</NavigationItem>
+              <NavigationItem link="/blog">Blog</NavigationItem>
+            </ul>        
+          </nav>
+        </CSSTransition>        
       </Aux>
 
     );

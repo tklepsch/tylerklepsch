@@ -8,6 +8,8 @@
 
 .Logo {
   display: block;
+  position: relative;
+  z-index: 102;
   transition: fill .4s ease;
 }
 

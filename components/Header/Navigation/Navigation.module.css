@@ -32,6 +32,8 @@
 
 @media (max-width: 768px) {
   .MenuBtn {
+    position: relative;
+    z-index: 102;
     display: block;
   }
 
@@ -43,16 +45,27 @@
     left: 0;
     z-index: 100;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(-80%);
     border-bottom: 20px solid #0B5D70;
-    transition: all 0.3s;
   }
 
   .Navigation.ShowMenu {
-    animation: openMobileNavigation 0.5s ease-in-out forwards;
+    animation: openMobileNavigation 0.3s ease-in-out forwards;
+  }
+
+  .Navigation.MenuShown {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .MenuHidden {
+    opacity: 0;
+    transform: translateY(-70%);
   }
 
   .Navigation.HideMenu {
-    animation: closeMobileNavigation 0.5s ease-in-out forwards;
+    animation: closeMobileNavigation 0.3s ease-in-out forwards;
   }
 
   .NavigationItems {
@@ -68,7 +81,7 @@
 @keyframes openMobileNavigation {
   0% {
     opacity: 0;
-    transform: translateY(-70%);
+    transform: translateY(-80%);
   }
 
   50% {
@@ -95,6 +108,6 @@
 
   100% {
     opacity: 0;
-    transform: translateY(-70%);
+    transform: translateY(-80%);
   }
 }
