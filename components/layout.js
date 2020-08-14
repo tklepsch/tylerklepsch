@@ -2,13 +2,13 @@ import Header from '../components/Header/Header';
 import Head from 'next/head';
 import cn from 'classnames';
 import styles from './layout.module.css';
+
 // import Header from './Header'
 
 const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
 
-export default function Layout({ children, columnType, backgroundPaddingtype}){
-
+export default function Layout({ children, backgroundPaddingtype}){
   return (
     <div className={styles.container}>
       <Head>
@@ -31,9 +31,7 @@ export default function Layout({ children, columnType, backgroundPaddingtype}){
 
         <div className={styles.BackgroundInterior}>
           <Header />
-          <section className={`pageContainer ${columnType}`}>
-            {children}
-          </section>
+          {children}
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
-import Layout from '../components/layout'
+import ContentLayout from '../components/ContentLayout'
 import Link from 'next/link';
 import pageBtnStyles from '../styles/pagebtn.module.css';
 
 export default function about() {
   return (
-    <Layout columnType="three-col" backgroundPaddingtype="no-side-padding">
-        <Link href="/"><a className={pageBtnStyles.PrevPageBtn}>Home</a></Link> 
+    <ContentLayout key="about" columnType="three-col" backgroundPaddingtype="no-side-padding">
+        <Link href="/" scroll={false}><a className={pageBtnStyles.PrevPageBtn} >Home</a></Link> 
         <article className='container__main-content'>
           <section>
             <h1>A little about me.</h1>
@@ -39,7 +39,7 @@ export default function about() {
             <p>Each of these terms represents the knowledge and experience I've gained working in a agency environment. I've had to wear many hats and adapt to various situations.</p>
           </section>
           <section>
-            <p>You can learn more about me by reading through <Link href="/blog"><a>my blog</a></Link></p> 
+            <p>You can learn more about me by reading through <Link href="/blog" scroll={false}><a>my blog</a></Link></p> 
             <p>Or, better yet, Let’s chat! <Link href="/contact"><a>Send me a message</a></Link> or <a href="https://www.linkedin.com/in/tyler-klepsch-92004926/">find me on LinkedIn.</a></p>           
           </section>
 
@@ -47,6 +47,6 @@ export default function about() {
           
         </article>
         <Link href="/contact"><a className={pageBtnStyles.NextPageBtn}>Contact Me</a></Link>  
-    </Layout>    
+    </ContentLayout>    
   );
 };

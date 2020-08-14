@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Date from '../components/Date/Date'
-import Layout from '../components/layout'
+import ContentLayout from '../components/ContentLayout'
 import pageBtnStyles from '../styles/pagebtn.module.css'
 import styles from './blog.module.css'
 import { getSortedPostsData } from '../lib/posts'
@@ -8,7 +8,7 @@ import { getSortedPostsData } from '../lib/posts'
 
 export default function Blog ({allPostsData}) {
   return (
-    <Layout columnType="one-col mid-width" backgroundPaddingtype="no-side-padding">
+    <ContentLayout columnType="one-col mid-width" backgroundPaddingtype="no-side-padding">
       <article className='container__main-content'>
         <h1>What's been on my mind?</h1>
         <ul className={styles.BlogContainer}>
@@ -46,7 +46,7 @@ export default function Blog ({allPostsData}) {
         <Link href="/contact"><a className={pageBtnStyles.PrevPageBtn}>Contact</a></Link>         
       </aside>
 
-    </Layout>
+    </ContentLayout>
   )
 }
 

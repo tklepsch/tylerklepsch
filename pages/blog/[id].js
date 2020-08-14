@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../../components/layout'
+import ContentLayout from '../../components/ContentLayout'
 import Date from  '../../components/Date/Date'
 import pageBtnStyles from '../../styles/pagebtn.module.css'
 import styles from './post.module.css'
@@ -8,7 +8,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
   return (
-    <Layout columnType="one-col mid-width" backgroundPaddingtype="right-padding">
+    <ContentLayout columnType="one-col mid-width" backgroundPaddingtype="right-padding">
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -23,7 +23,7 @@ export default function Post({ postData }) {
         <Link href="/blog"><a className={pageBtnStyles.PrevPageBtn}>Back to Blog</a></Link>         
       </aside>
 
-    </Layout>
+    </ContentLayout>
   )
 }
 
