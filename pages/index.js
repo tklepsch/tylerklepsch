@@ -5,10 +5,6 @@ import styles from './index.module.css'
 import utilityStyles from '../styles/pagebtn.module.css';
 
 export default function Home() {
-  React.useEffect(() => {
-    console.log("mount index")
-  }, []);
-
   return (
     <ContentLayout key="home" columnType="two-col" backgroundPaddingtype="left-padding">
       <Head>
