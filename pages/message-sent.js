@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import ContentLayout from '../components/ContentLayout'
 import Link from 'next/link'
 
 export default function MessageSent() {
