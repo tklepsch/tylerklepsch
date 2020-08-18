@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import StateContext from '../../../../components/StateContext';
 import Link from 'next/link'
 
 import classes from './NavigationItem.module.css';
 
-const navigationItem = ( props ) => (
+
+
+export default function navigationItem ( props ) {
+  const {navigationClickedHandler} = useContext(StateContext);
+  
+  return (
     <li className={classes.NavigationItem}>
       <Link 
         href={props.link}>
-        <a className={classes.NavLink}>{props.children}</a>
+        <a className={classes.NavLink} onClick={navigationClickedHandler}>{props.children}</a>
       </Link>
-    </li>
-);
-
-export default navigationItem;
+    </li>    
+  )
+};

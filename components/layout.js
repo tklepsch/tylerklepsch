@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import StateContext from '../components/StateContext';
 import Header from '../components/Header/Header';
 import Head from 'next/head';
 import cn from 'classnames';
@@ -9,6 +11,8 @@ const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
 
 export default function Layout({ children, backgroundPaddingtype}){
+  const {backButtonClicked, nextButtonClicked} = useContext(StateContext);
+
   return (
     <div className={styles.container}>
       <Head>

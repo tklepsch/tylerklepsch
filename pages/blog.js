@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useContext } from 'react';
+import StateContext from '../components/StateContext';
 import Link from 'next/link'
 import Date from '../components/Date/Date'
 import ContentLayout from '../components/ContentLayout'
@@ -8,12 +9,11 @@ import { getSortedPostsData } from '../lib/posts'
 
 
 export default function Blog ({allPostsData}) {
-  const [backButtonClicked, setPrevBtnClicked] = useState(false);
+  const {backButtonClickedHandler} = useContext(StateContext);
 
   return (
     <ContentLayout 
-      columnType="one-col mid-width" backgroundPaddingtype="no-side-padding"
-      backButtonClicked={backButtonClicked}>
+      columnType="one-col mid-width" backgroundPaddingtype="no-side-padding">
       <article className='container__main-content'>
         <h1>What's been on my mind?</h1>
         <ul className={styles.BlogContainer}>
@@ -53,7 +53,7 @@ export default function Blog ({allPostsData}) {
           scroll={false}>
           <a 
             className={pageBtnStyles.PrevPageBtn} 
-            onClick={() => setPrevBtnClicked(true)}>Contact</a></Link>         
+            onClick={backButtonClickedHandler}>Contact</a></Link>         
       </aside>
 
     </ContentLayout>

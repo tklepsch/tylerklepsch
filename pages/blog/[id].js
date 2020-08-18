@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useContext } from 'react';
+import StateContext from '../../components/StateContext';
 import Head from 'next/head'
 import Link from 'next/link'
 import ContentLayout from '../../components/ContentLayout'
@@ -8,13 +9,12 @@ import styles from './post.module.css'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
-  const [backButtonClicked, setPrevBtnClicked] = useState(false);
+  const {backButtonClickedHandler} = useContext(StateContext);
 
   return (
     <ContentLayout 
       columnType="one-col mid-width" 
-      backgroundPaddingtype="right-padding" 
-      backButtonClicked={backButtonClicked}>
+      backgroundPaddingtype="right-padding">
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -31,7 +31,7 @@ export default function Post({ postData }) {
           scroll={false}>
           <a 
             className={pageBtnStyles.PrevPageBtn}  
-            onClick={() => setPrevBtnClicked(true)}>Back to Blog</a></Link>         
+            onClick={backButtonClickedHandler}>Back to Blog</a></Link>         
       </aside>
 
     </ContentLayout>

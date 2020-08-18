@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import StateContext from '../components/StateContext';
 import Head from 'next/head'
 import Link from 'next/link'
 import ContentLayout, { siteTitle } from '../components/ContentLayout'
@@ -5,6 +7,8 @@ import styles from './index.module.css'
 import utilityStyles from '../styles/pagebtn.module.css';
 
 export default function Home() {
+  const {nextButtonClickedHandler} = useContext(StateContext);
+
   return (
     <ContentLayout key="home" columnType="two-col" backgroundPaddingtype="left-padding">
       <Head>
@@ -16,7 +20,7 @@ export default function Home() {
         <p className={styles.text}>Want to chat more? <Link href='/contact'><a className={styles.link}>Send me an email</a></Link> or <a href="https://www.linkedin.com/in/tyler-klepsch-92004926/" className={styles.link}>find me on LinkedIn.</a></p>
       </article>
       <Link href="/about" scroll={false}>
-        <a className={utilityStyles.NextPageBtn}>About Me</a>
+        <a className={utilityStyles.NextPageBtn} onClick={nextButtonClickedHandler}>About Me</a>
       </Link>  
     </ContentLayout>
   )

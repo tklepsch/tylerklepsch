@@ -1,3 +1,4 @@
+import StateContext from '../components/StateContext';
 import { Component } from 'react'
 import Layout from './layout';
 import { motion } from 'framer-motion';
@@ -5,46 +6,41 @@ import { motion } from 'framer-motion';
 const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
 
-export default class contentLayout extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      backButtonClicked: false,
-      forwardButtonClicked: false
-    };
+let layoutMotionVariants = {
+  pageInitial: {
+    opacity: 0,
+    x: ''
+  },
+  pageAnimate: {
+    opacity: 1,
+    x: 0
+  },
+  pageExit: {
+    opacity: 0,
+    x: ''
   }
+}
 
-  render() {
-    let layoutMotionVariants = {
-      pageInitial: {
-        opacity: 0,
-        x: '-100%'
-      },
-      pageAnimate: {
-        opacity: 1,
-        x: 0
-      },
-      pageExit: {
-        opacity: 0,
-        x: '-100%'
-      }
-    }
-  
-    if(this.props.columnType === 'one-col mid-width') {
-      layoutMotionVariants.pageInitial.x = '0';
-      layoutMotionVariants.pageExit.x = '0';
-    }
-  
-    if(this.props.backButtonClicked) {
-      layoutMotionVariants.pageInitial.x = '100%';
+export default class ContentLayout extends Component {
+  componentDidUpdate() {
+    // Handles Motion animations when a button is clicked using context to manage our button state.
+    if(this.context.backButtonClicked) {
+      layoutMotionVariants.pageInitial.x = '-100%';
       layoutMotionVariants.pageExit.x = '100%';
     }
 
-    if(this.props.nextButtonClicked) {
-      layoutMotionVariants.pageInitial.x = '-100%';
+    if(this.context.nextButtonClicked) {
+      layoutMotionVariants.pageInitial.x = '100%';
       layoutMotionVariants.pageExit.x = '-100%';
     }
-    
+
+    if(this.context.navigationButtonClicked) {
+      layoutMotionVariants.pageInitial.x = '0';
+      layoutMotionVariants.pageExit.x = '0';
+    }
+  }
+
+  render() {
     return (
       <Layout backgroundPaddingtype={this.props.backgroundPaddingtype}>
         <motion.section 
@@ -60,3 +56,5 @@ export default class contentLayout extends Component {
     )        
   }
 }
+
+ContentLayout.contextType = StateContext;

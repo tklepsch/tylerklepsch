@@ -1,22 +1,21 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import StateContext from '../components/StateContext';
 import ContentLayout from '../components/ContentLayout'
 import Link from 'next/link';
+
 import pageBtnStyles from '../styles/pagebtn.module.css';
 
 export default function about() {
-  const [backButtonClicked, setPrevBtnClicked] = useState(false);
-  const [nextButtonClicked, setNextClicked] = useState(false);
+  const {backButtonClickedHandler, nextButtonClickedHandler} = useContext(StateContext);
 
   return (
     <ContentLayout 
       key="about" 
-      columnType="three-col" backgroundPaddingtype="no-side-padding" 
-      backButtonClicked={backButtonClicked}
-      nextButtonClicked={nextButtonClicked}>
+      columnType="three-col" backgroundPaddingtype="no-side-padding">
       <Link href="/" scroll={false}>
         <a 
           className={pageBtnStyles.PrevPageBtn} 
-          onClick={() => setPrevBtnClicked(true)}>Home</a>
+          onClick={backButtonClickedHandler}>Home</a>
       </Link> 
       <article className='container__main-content'>
         <section>
@@ -59,7 +58,7 @@ export default function about() {
         href="/contact" 
         scroll={false}>
         <a className={pageBtnStyles.NextPageBtn}  
-          onClick={() => setNextClicked(true)}>Contact Me</a></Link>  
+          onClick={nextButtonClickedHandler}>Contact Me</a></Link>  
     </ContentLayout>    
   );
 };
