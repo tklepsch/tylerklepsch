@@ -1,17 +1,17 @@
-import { useContext } from 'react';
-import StateContext from '../components/StateContext';
+import { useContext } from 'react'
+import StateContext from '../components/StateContext'
 import ContentLayout from '../components/ContentLayout'
 import Link from 'next/link'
 
-import ContactForm from '../components/ContactForm/ContactForm';
-import pageBtnStyles from '../styles/pagebtn.module.css';
+import ContactForm from '../components/ContactForm/ContactForm'
+import pageBtnStyles from '../styles/pagebtn.module.css'
 
 export default function contact(){
   const {backButtonClickedHandler, nextButtonClickedHandler} = useContext(StateContext);
 
   return (
     <ContentLayout 
-      columnType="three-col" backgroundPaddingtype="no-side-padding">
+      columnType="three-col">
       <Link href="/about" scroll={false}>
         <a className={pageBtnStyles.PrevPageBtn} 
           onClick={backButtonClickedHandler}>About Me</a>

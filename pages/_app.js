@@ -1,13 +1,14 @@
-import App from "next/app";
-import '../styles/globals.css';
-import { AnimatePresence } from "framer-motion";
-import StateContext from '../components/StateContext';
+import App from "next/app"
+import '../styles/globals.css'
+import { AnimatePresence } from "framer-motion"
+import StateContext from '../components/StateContext'
 
 export default class MyApp extends App {
   state = {
     backButtonClicked: false,
     nextButtonClicked: false,
-    navigationButtonClicked: false
+    navigationButtonClicked: false,
+    colorSwitch: 'white'
   }
 
   backButtonClickedHandler = () => {
@@ -34,6 +35,15 @@ export default class MyApp extends App {
     })
   }
 
+  colorSwitchHandler = () => {
+    if(this.state.colorSwitch === 'blue') {
+    this.setState({colorSwitch: 'white'})
+    } else {
+      this.setState({colorSwitch: 'blue'})
+    }
+
+  }
+
   render() {
     // Provided a lot of help with getting the exit animate to work correctly: https://github.com/framer/motion/issues/474#issuecomment-595444564
     const { Component, pageProps, router } = this.props;
@@ -42,9 +52,11 @@ export default class MyApp extends App {
       <StateContext.Provider value={{ 
           backButtonClicked: this.state.backButtonClicked, nextButtonClicked: this.state.nextButtonClicked,
           navigationButtonClicked: this.state.navigationButtonClicked,
+          colorSwitch: this.state.colorSwitch,
           backButtonClickedHandler: this.backButtonClickedHandler,
           nextButtonClickedHandler: this.nextButtonClickedHandler,
-          navigationClickedHandler: this.navigationClickedHandler}}>
+          navigationClickedHandler: this.navigationClickedHandler,
+          colorSwitchHandler: this.colorSwitchHandler}}>
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.asPath}/>        
         </AnimatePresence>        

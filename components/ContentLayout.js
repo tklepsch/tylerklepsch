@@ -1,7 +1,7 @@
-import StateContext from '../components/StateContext';
+import StateContext from '../components/StateContext'
 import { Component } from 'react'
-import Layout from './layout';
-import { motion } from 'framer-motion';
+import Layout from './layout'
+import { motion } from 'framer-motion'
 
 const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
@@ -42,7 +42,7 @@ export default class ContentLayout extends Component {
 
   render() {
     return (
-      <Layout backgroundPaddingtype={this.props.backgroundPaddingtype}>
+      <Layout>
         <motion.section 
           transition={{ duration: 1 }}
           initial="pageInitial" 

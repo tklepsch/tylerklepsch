@@ -1,9 +1,9 @@
-import { useContext } from 'react';
-import StateContext from '../components/StateContext';
+import { useContext } from 'react'
+import StateContext from '../components/StateContext'
 import ContentLayout from '../components/ContentLayout'
-import Link from 'next/link';
+import Link from 'next/link'
 
-import pageBtnStyles from '../styles/pagebtn.module.css';
+import pageBtnStyles from '../styles/pagebtn.module.css'
 
 export default function about() {
   const {backButtonClickedHandler, nextButtonClickedHandler} = useContext(StateContext);
@@ -11,7 +11,7 @@ export default function about() {
   return (
     <ContentLayout 
       key="about" 
-      columnType="three-col" backgroundPaddingtype="no-side-padding">
+      columnType="three-col">
       <Link href="/" scroll={false}>
         <a 
           className={pageBtnStyles.PrevPageBtn} 

@@ -1,5 +1,5 @@
-import ContentLayout from '../components/ContentLayout';
-import Link from 'next/link';
+import ContentLayout from '../components/ContentLayout'
+import Link from 'next/link'
 import pageBtnStyles from '../styles/pagebtn.module.css'
 
 // pages/404.js

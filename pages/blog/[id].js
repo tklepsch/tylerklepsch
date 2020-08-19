@@ -13,8 +13,7 @@ export default function Post({ postData }) {
 
   return (
     <ContentLayout 
-      columnType="one-col mid-width" 
-      backgroundPaddingtype="right-padding">
+      columnType="one-col mid-width">
       <Head>
         <title>{postData.title}</title>
       </Head>

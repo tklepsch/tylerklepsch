@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import StateContext from '../components/StateContext';
+import { useContext } from 'react'
+import StateContext from '../components/StateContext'
 import Link from 'next/link'
 import Date from '../components/Date/Date'
 import ContentLayout from '../components/ContentLayout'
@@ -12,8 +12,7 @@ export default function Blog ({allPostsData}) {
   const {backButtonClickedHandler} = useContext(StateContext);
 
   return (
-    <ContentLayout 
-      columnType="one-col mid-width" backgroundPaddingtype="no-side-padding">
+    <ContentLayout columnType="one-col mid-width">
       <article className='container__main-content'>
         <h1>What's been on my mind?</h1>
         <ul className={styles.BlogContainer}>

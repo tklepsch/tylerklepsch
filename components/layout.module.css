@@ -1,28 +1,22 @@
 .BackgroundExterior {
   position: relative;
   z-index: 1;
-  background: #0B5D70;
+  background-color: #0B5D70;
   height: 100%;
   min-height: 100vh;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
   transition: 0.3s all;
 }
 
-.left-padding {
-  padding-right: 0;
-}
-.right-padding {
-  padding-left: 0;
-}
-.no-side-padding {
-  padding-left: 0;
-  padding-right: 0;
+/* :global() lets css modules know this class is of global scope */
+:global(.white) .BackgroundExterior {
+  background-color: #0B5D70;
 }
 
-.BackgroundPadding {
-  padding-right: 0;
+:global(.blue) .BackgroundExterior {
+  background-color: #FFF;
 }
 
 .BackgroundInterior {
@@ -32,6 +26,15 @@
   height: 100%;
   overflow: auto;
   flex: 1;
+  transition: 0.3s all;
+}
+
+:global(.white) .BackgroundInterior {
+  background-color: #FFF;
+}
+
+:global(.blue) .BackgroundInterior {
+  background-color: #0B5D70;
 }
 
 .Content {
