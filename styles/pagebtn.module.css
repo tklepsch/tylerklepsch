@@ -85,26 +85,17 @@
 
 
 @media (max-width: 769px) {
-  .NextPageBtn,
-  .PrevPageBtn  {
-    position: absolute;
-    bottom: 0;
+  .NextPageBtn:link,
+  .NextPageBtn:visited,
+  .PrevPageBtn:link,
+  .PrevPageBtn:visited  {
+    display: block;
     font-size: 0.875rem;
   }
   .NextPageBtn::before,
   .PrevPageBtn::before {
     width: 15px;
     height: 30px;
-    margin-bottom: 0.25rem;
-  }
-
-  .NextPageBtn {
-    bottom: 1.5rem;
-    right: 1.5rem;
-  }
-
-  .PrevPageBtn {
-    bottom: 1.5rem;
-    left: 1.5rem;
+    margin: 0 auto 0.25rem;
   }
 }
