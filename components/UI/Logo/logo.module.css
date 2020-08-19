@@ -18,16 +18,22 @@
   display: block;
   margin-bottom: 0;
   line-height: 0;
-  text-decoration: underline;
-  border-bottom: none;
-  background: transparent;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
 }
 
 .LogoLink:hover,
 .LogoLink:focus {
-  text-decoration: underline;
-  border-bottom: none;
-  background: none;
+  border: none;
+  background-color: transparent;
+}
+
+:global(.dark) .LogoLink:visited:hover,
+:global(.dark) .LogoLink:visited:focus,
+:global(.dark) .LogoLink:link:hover,
+:global(.dark) .LogoLink:link:focus {
+  background-color: transparent;
 }
 
 /* .LogoLink:focus {
@@ -52,22 +58,22 @@
   fill: #0B5D70;
 }
 
-.LogoLink:hover .Tfill,
-.LogoLink:focus .Tfill {
+:global(.dark) .LogoLink .Tfill,
+:global(.dark) .LogoLink:focus .Tfill {
   transform: translate(55px);
 }
 
-.LogoLink:hover .Kfill,
-.LogoLink:focus .Kfill {
+:global(.dark) .LogoLink .Kfill,
+:global(.dark) .LogoLink:focus .Kfill {
   transform: translate(-55px);
 }
 
-.LogoLink:hover .Tpath,
-.LogoLink:focus .Tpath {
+:global(.dark) .LogoLink .Tpath,
+:global(.dark) .LogoLink .Tpath {
   fill: #FFF;
 }
 
-.LogoLink:hover .Kpath,
-.LogoLink:focus .Kpath {
+:global(.dark) .LogoLink .Kpath,
+:global(.dark) .LogoLink .Kpath {
   fill: #0B5D70;
 }
