@@ -143,6 +143,8 @@ section:last-of-type {
 
 .pageContainer {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 3rem 12rem;
   text-align: left;
   box-sizing: border-box;

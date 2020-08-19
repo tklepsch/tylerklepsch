@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import StateContext from '../../components/StateContext';
 import Head from 'next/head'
 import Link from 'next/link'
-import ContentLayout from '../../components/ContentLayout'
+import ContentLayout, { siteTitle } from '../../components/ContentLayout'
 import Date from  '../../components/Date/Date'
 import pageBtnStyles from '../../styles/pagebtn.module.css'
 import styles from './post.module.css'
@@ -15,7 +15,7 @@ export default function Post({ postData }) {
     <ContentLayout 
       columnType="one-col mid-width">
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.title} - {siteTitle}</title>
       </Head>
       <main>
         <h1 className={styles.PostTitle}>{postData.title}</h1>

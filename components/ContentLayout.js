@@ -1,10 +1,10 @@
 import StateContext from '../components/StateContext'
 import { Component } from 'react'
 import Layout from './layout'
+import Head from 'next/head'
 import { motion } from 'framer-motion'
 import ColorMode from './UI/ColorMode/ColorMode'
 
-const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
 
 let layoutMotionVariants = {
@@ -44,6 +44,9 @@ export default class ContentLayout extends Component {
   render() {
     return (
       <Layout>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
         <motion.section 
           transition={{ duration: 1 }}
           initial="pageInitial" 
