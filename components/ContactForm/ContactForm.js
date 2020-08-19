@@ -16,12 +16,12 @@ const encode = (data) => {
 class ContactForm extends Component {
   state = {
     contactInfo: {
-      name: {
+      email: {
         elementType: 'input',
         elementConfig: {
           type: 'text',
-          label: 'Name',
-          placeholder: 'John Jane',
+          label: 'Email',
+          placeholder: 'example@email.com',
         },
         value: '',
         validation: {
