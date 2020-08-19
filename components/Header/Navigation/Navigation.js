@@ -18,8 +18,8 @@ class Navigation extends Component {
   render () {
   
     const timing = {
-      enter: 300,
-      exit: 300
+      enter: 800,
+      exit: 500
     }
 
     

@@ -65,7 +65,7 @@
   }
 
   .Navigation.ShowMenu {
-    animation: openMobileNavigation 0.3s ease-in-out forwards;
+    animation: openMobileNavigation 0.8s ease-in-out forwards;
   }
 
   .Navigation.MenuShown {
@@ -79,7 +79,7 @@
   }
 
   .Navigation.HideMenu {
-    animation: closeMobileNavigation 0.3s ease-in-out forwards;
+    animation: closeMobileNavigation 0.5s ease-in-out forwards;
   }
 
   .NavigationItems {
