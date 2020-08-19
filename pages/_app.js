@@ -8,7 +8,15 @@ export default class MyApp extends App {
     backButtonClicked: false,
     nextButtonClicked: false,
     navigationButtonClicked: false,
-    colorSwitch: 'light'
+    colorSwitch: 'white'
+  }
+
+  componentDidMount() {
+    // If ColorSwitch was previously selected, use selected color.
+    const storage = localStorage.getItem("colorSwitch");
+    if(storage) {
+      this.setState({colorSwitch: storage})
+    }
   }
 
   backButtonClickedHandler = () => {
@@ -37,9 +45,11 @@ export default class MyApp extends App {
 
   colorSwitchHandler = () => {
     if(this.state.colorSwitch === 'dark') {
-    this.setState({colorSwitch: 'light'})
+      this.setState({colorSwitch: 'light'})
+      localStorage.setItem("colorSwitch", "light");
     } else {
       this.setState({colorSwitch: 'dark'})
+      localStorage.setItem("colorSwitch", "dark");
     }
 
   }
