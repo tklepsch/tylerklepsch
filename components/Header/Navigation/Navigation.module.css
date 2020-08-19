@@ -6,10 +6,12 @@
   border: none;
   padding: 0.5rem;
 }
+
 .MenuBtn svg {
   width: 45px;
   display: block;
-  margin: 0 auto
+  margin: 0 auto;
+  stroke: #3D3D3D;
 }
 
 .MenuBtn span {
@@ -17,8 +19,8 @@
   font-size: 1rem;
   line-height: 1;
   margin: 0.25rem 0 0;
+  color: #3D3D3D;
 }
-
 
 .Navigation {
   display: inline-block;
@@ -37,6 +39,14 @@
     display: block;
   }
 
+  :global(.dark) .MenuBtn span {
+    color: #FFF;
+  }
+
+  :global(.dark) .MenuBtn svg {
+    stroke: #FFF;
+  }
+  
   .Navigation {
     width: 100%;
     height: calc(100vh - 20px);
@@ -48,6 +58,10 @@
     opacity: 0;
     transform: translateY(-80%);
     border-bottom: 20px solid #0B5D70;
+  }
+
+  :global(.dark) .Navigation {
+    border-bottom: 20px solid #FFF;
   }
 
   .Navigation.ShowMenu {
@@ -75,6 +89,10 @@
     list-style: none;
     flex-direction: column;
     justify-content: center;
+  }
+
+  :global(.dark) .NavigationItems {
+    background-color: #0B5D70;
   }
 }
 

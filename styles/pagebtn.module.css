@@ -48,6 +48,7 @@
 .PrevPageBtn:link:hover,
 .NextPageBtn:visited:focus,
 .PrevPageBtn:visited:focus {
+  background-color: transparent;
   text-decoration: underline;
   opacity: 1;
 }
@@ -61,6 +62,27 @@
 .PrevPageBtn:focus::before {
   transform: translateX(-15px);
 }
+
+:global(.dark) .NextPageBtn,
+:global(.dark) .PrevPageBtn,
+:global(.dark) .NextPageBtn:link,
+:global(.dark) .PrevPageBtn:link,
+:global(.dark) .NextPageBtn:visited,
+:global(.dark) .PrevPageBtn:visited {
+  background-color: transparent;
+  color: #FFF;
+}
+
+:global(.dark) .NextPageBtn::before {
+  background: url('/assets/next-arrow-white.svg') no-repeat;
+  background-size: 100%;
+}
+
+:global(.dark) .PrevPageBtn::before {
+  background: url('/assets/prev-arrow-white.svg') no-repeat;
+  background-size: 100%;
+}
+
 
 @media (max-width: 769px) {
   .NextPageBtn,

@@ -2,6 +2,7 @@ import StateContext from '../components/StateContext'
 import { Component } from 'react'
 import Layout from './layout'
 import { motion } from 'framer-motion'
+import ColorMode from './UI/ColorMode/ColorMode'
 
 const name = 'Tyler Klepsch'
 export const siteTitle = 'Tyler Klepsch | Web Developer'
@@ -50,8 +51,9 @@ export default class ContentLayout extends Component {
           exit="pageExit"
           variants={layoutMotionVariants}
           className={`pageContainer ${this.props.columnType}`}>
-          {this.props.children}            
-        </motion.section>            
+          {this.props.children} 
+          <ColorMode />           
+        </motion.section>         
       </Layout>         
     )        
   }

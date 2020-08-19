@@ -38,6 +38,11 @@
   text-decoration: underline;
 }
 
+:global(.dark) .BlogPostLink > a:hover,
+:global(.dark) .BlogPostLink > a:focus {
+  color: #C6D1D9;
+}
+
 .BlogPostDate {
   display: block;
   margin: 0.5rem 0;

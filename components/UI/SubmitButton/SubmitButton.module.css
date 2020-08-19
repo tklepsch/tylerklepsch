@@ -25,3 +25,20 @@
   border-color: #ccc;
   cursor: not-allowed;
 }
+
+:global(.blue) .Button,
+:global(.blue) .form-submit {
+  color: #0B5D70;
+  background-color: #FFF;
+  border: 1px solid #FFF;
+}
+
+:global(.blue) .Button:hover,
+:global(.blue) .Button:focus,
+:global(.blue) .form-submit:hover,
+:global(.blue) .form-submit:focus  {
+  color: #C6D1D9;
+  background-color: #0B5D70;
+  border: 1px solid #C6D1D9;
+}
+

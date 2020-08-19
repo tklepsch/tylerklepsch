@@ -29,8 +29,20 @@
 .NavLink:hover,
 .NavLink:focus {
   color: #3D3D3D;
-  background: none;
+  background-color: transparent;
   border-bottom-color: #3D3D3D;
+}
+
+:global(.dark) .NavLink:link,
+:global(.dark) .NavLink:visited {
+  color: #FFF;
+}
+
+:global(.dark) .NavLink:hover,
+:global(.dark) .NavLink:focus {
+  background-color: transparent;
+  color: #FFF;
+  border-bottom-color: #FFF;
 }
 
 @media (max-width: 768px) {

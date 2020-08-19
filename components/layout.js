@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import StateContext from '../components/StateContext'
 import Header from '../components/Header/Header'
 import Head from 'next/head'
-import ColorMode from './UI/ColorMode/ColorMode'
 import styles from './layout.module.css'
 
 // import Header from './Header'
@@ -38,7 +37,6 @@ export default function Layout({ children }){
         <div className={styles.BackgroundInterior}>
           <Header />
           {children}
-          <ColorMode />
         </div>
       </div>
     </div>

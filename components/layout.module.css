@@ -11,11 +11,11 @@
 }
 
 /* :global() lets css modules know this class is of global scope */
-:global(.white) .BackgroundExterior {
+:global(.light) .BackgroundExterior {
   background-color: #0B5D70;
 }
 
-:global(.blue) .BackgroundExterior {
+:global(.dark) .BackgroundExterior {
   background-color: #FFF;
 }
 
@@ -29,11 +29,11 @@
   transition: 0.3s all;
 }
 
-:global(.white) .BackgroundInterior {
+:global(.light) .BackgroundInterior {
   background-color: #FFF;
 }
 
-:global(.blue) .BackgroundInterior {
+:global(.dark) .BackgroundInterior {
   background-color: #0B5D70;
 }
 

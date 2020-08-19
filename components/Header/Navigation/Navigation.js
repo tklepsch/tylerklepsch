@@ -22,13 +22,15 @@ class Navigation extends Component {
       exit: 300
     }
 
+    
+
     return (
       <Aux>
         <button 
           className={classes.MenuBtn}
           onClick={() => this.setState(prevState  => ({showMenu: !prevState.showMenu}))}>
             <svg width="65" height="34" viewBox="0 0 65 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 2H65M0 16.5H65M0 31.5H65" stroke="#3D3D3D" strokeWidth="4"/>
+              <path d="M0 2H65M0 16.5H65M0 31.5H65" strokeWidth="4"/>
             </svg>
           <span>Menu</span>
         </button>

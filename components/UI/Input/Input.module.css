@@ -5,6 +5,10 @@
   line-height: 1.5;
 }
 
+:global(.dark) .Label {
+  color: #C6D1D9;
+}
+
 .InputElement {
   width: 100%;
   padding: 10px;
@@ -32,4 +36,8 @@
   color: rgb(139, 4, 4);
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+:global(.dark) .InvalidText {
+  color: #FDB6B6;
 }

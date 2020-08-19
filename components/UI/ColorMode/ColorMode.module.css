@@ -1,0 +1,44 @@
+.ColorMode {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background-color: #FFF;
+  border: 3px solid #0B5D70;
+  width: 20px;
+  height: 20px;
+  border-radius: 2rem;
+  font-size: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.ColorMode:hover, 
+.ColorMode:focus {
+  width: 200px;
+  height: 30px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background-color: #0B5D70;
+  color: #FFF;
+}
+
+:global(.dark) .ColorMode {
+  background-color: #0B5D70;
+  color: #FFF;
+  border-color: #FFF;
+}
+
+:global(.dark) .ColorMode:hover,
+:global(.dark) .ColorMode:focus {
+  background-color: #FFF;
+  color: #0B5D70;
+}
+
+@media (max-width: 768px) {
+  .ColorMode {
+    left: 47%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+  }
+}

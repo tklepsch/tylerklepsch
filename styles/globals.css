@@ -203,7 +203,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #0b5d70;
+  color: #3D3D3D;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -211,13 +211,20 @@ h6 {
 
 h1,
 .title {
+  color: #0b5d70;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 h2 {
+  color: #0b5d70;
   font-size: 1.75rem;
   font-weight: bold;
+}
+
+.dark h1,
+.dark h2 {
+  color: #FFF;
 }
 
 h3 {
@@ -241,6 +248,14 @@ h6 {
   margin-bottom: 1rem;
 }
 
+
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #FFF;
+}
+
 p,
 a,
 span,
@@ -255,6 +270,19 @@ a,
 span,
 .text {
   margin-bottom: 1rem;
+}
+
+time {
+  color: #3D3D3D;
+}
+
+.dark p,
+.dark a,
+.dark span,
+.dark ol,
+.dark li,
+.dark time {
+  color: #C6D1D9;
 }
 
 li,
@@ -277,6 +305,7 @@ a:visited {
 }
 
 a:active {
+  background-color: transparent;
   color: #EDBE51;
 }
 
@@ -287,6 +316,19 @@ a:focus {
   background-color: #EDBE51;
   border-bottom: 4px solid #3D3D3D;
 }
+
+.dark a,
+.dark a:visited {
+  color: #FFF;
+  border-bottom-color: #F0C86A;
+}
+
+.dark a:hover,
+.dark a:focus {
+  background-color: #F0C86A;
+  color: #3D3D3D;
+}
+
 
 /* When highlighting text with your mouse...*/
 /* WebKit/Blink Browsers */

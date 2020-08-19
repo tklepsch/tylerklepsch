@@ -4,12 +4,12 @@ import StateContext from '../../StateContext';
 import styles from './ColorMode.module.css';
 
 const ColorMode = () => {
-  const {colorSwitchHandler} = useContext(StateContext);
+  const {colorSwitch, colorSwitchHandler} = useContext(StateContext);
 
   return (
     <button
         className={styles.ColorMode}
-        onClick={colorSwitchHandler}>Select Site Color</button>    
+        onClick={colorSwitchHandler}>{colorSwitch === 'light' ? 'Dark Mode' : 'Light Mode'}</button>    
   )
 }
 

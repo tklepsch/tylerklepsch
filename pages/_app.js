@@ -8,7 +8,7 @@ export default class MyApp extends App {
     backButtonClicked: false,
     nextButtonClicked: false,
     navigationButtonClicked: false,
-    colorSwitch: 'white'
+    colorSwitch: 'light'
   }
 
   backButtonClickedHandler = () => {
@@ -36,10 +36,10 @@ export default class MyApp extends App {
   }
 
   colorSwitchHandler = () => {
-    if(this.state.colorSwitch === 'blue') {
-    this.setState({colorSwitch: 'white'})
+    if(this.state.colorSwitch === 'dark') {
+    this.setState({colorSwitch: 'light'})
     } else {
-      this.setState({colorSwitch: 'blue'})
+      this.setState({colorSwitch: 'dark'})
     }
 
   }
