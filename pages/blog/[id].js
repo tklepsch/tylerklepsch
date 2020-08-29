@@ -12,7 +12,7 @@ export default function Post({ postData }) {
   const {backButtonClickedHandler} = useContext(StateContext);
 
   return (
-    <ContentLayout 
+    <ContentLayout
       columnType="one-col mid-width">
       <Head>
         <title>{postData.title} - {siteTitle}</title>
@@ -25,12 +25,12 @@ export default function Post({ postData }) {
         <article className={styles.MarkdownContainer} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </main>
       <aside className={pageBtnStyles.BtnContainer}>
-        <Link 
-          href="/blog" 
+        <Link
+          href="/blog"
           scroll={false}>
-          <a 
-            className={pageBtnStyles.PrevPageBtn}  
-            onClick={backButtonClickedHandler}>Back to Blog</a></Link>         
+          <a
+            className={pageBtnStyles.PrevPageBtn}
+            onClick={backButtonClickedHandler}>Back to Blog</a></Link>
       </aside>
 
     </ContentLayout>

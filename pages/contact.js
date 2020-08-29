@@ -10,22 +10,22 @@ export default function contact(){
   const {backButtonClickedHandler, nextButtonClickedHandler} = useContext(StateContext);
 
   return (
-    <ContentLayout 
+    <ContentLayout
       columnType="three-col">
       <Link href="/about" scroll={false}>
-        <a className={pageBtnStyles.PrevPageBtn} 
+        <a className={pageBtnStyles.PrevPageBtn}
           onClick={backButtonClickedHandler}>About Me</a>
-      </Link> 
+      </Link>
       <article className='container__main-content'>
         <h1>Contact Me</h1>
         <p>Want to have a chat with me? Submit the form below and I'll receive an email with the information provided.</p>
         <ContactForm />
       </article>
-      <Link 
-        href="/blog" 
+      <Link
+        href="/blog"
         scroll={false}>
-          <a className={pageBtnStyles.NextPageBtn}   
-          onClick={nextButtonClickedHandler}>Blog</a></Link>     
-    </ContentLayout>    
+          <a className={pageBtnStyles.NextPageBtn}
+          onClick={nextButtonClickedHandler}>Blog</a></Link>
+    </ContentLayout>
   )
 };

@@ -23,7 +23,7 @@ export default class MyApp extends App {
     this.setState({
       backButtonClicked: true,
       nextButtonClicked: false,
-      navigationButtonClicked: false   
+      navigationButtonClicked: false
     })
   }
 
@@ -31,7 +31,7 @@ export default class MyApp extends App {
     this.setState({
       backButtonClicked: false,
       nextButtonClicked: true,
-      navigationButtonClicked: false 
+      navigationButtonClicked: false
     })
   }
 
@@ -59,7 +59,7 @@ export default class MyApp extends App {
     const { Component, pageProps, router } = this.props;
     return (
       // Using Context to Help us manage state for page clicks;
-      <StateContext.Provider value={{ 
+      <StateContext.Provider value={{
           backButtonClicked: this.state.backButtonClicked, nextButtonClicked: this.state.nextButtonClicked,
           navigationButtonClicked: this.state.navigationButtonClicked,
           colorSwitch: this.state.colorSwitch,
@@ -68,8 +68,8 @@ export default class MyApp extends App {
           navigationClickedHandler: this.navigationClickedHandler,
           colorSwitchHandler: this.colorSwitchHandler}}>
         <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} key={router.asPath}/>        
-        </AnimatePresence>        
+          <Component {...pageProps} key={router.asPath}/>
+        </AnimatePresence>
       </StateContext.Provider>
 
     )

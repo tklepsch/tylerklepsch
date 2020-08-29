@@ -16,7 +16,7 @@ export default function Home() {
       </article>
       <Link href="/about" scroll={false}>
         <a className={utilityStyles.NextPageBtn} onClick={nextButtonClickedHandler}>About Me</a>
-      </Link>  
+      </Link>
     </ContentLayout>
   )
 }

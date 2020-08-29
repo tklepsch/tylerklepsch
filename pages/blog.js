@@ -17,24 +17,24 @@ export default function Blog ({allPostsData}) {
         <h1>What's been on my mind?</h1>
         <ul className={styles.BlogContainer}>
           {allPostsData.map(({ id, thumbnail, mainImage, imageAlt, date, title, excerpt }) => (
-            <li 
+            <li
               key={id}
               className={styles.BlogPost}>
               {
                 // If no image provided, don't print.
-                thumbnail ? <div className={styles.BlogPostThumbnail}><img src={thumbnail} alt={imageAlt} /></div> : null             
+                thumbnail ? <div className={styles.BlogPostThumbnail}><img src={thumbnail} alt={imageAlt} /></div> : null
               }
 
               <div className={styles.BlogPostPreview}>
                 <div className={styles.BlogPostLink}>
                   <Link href="/blog/[id]" as={`blog/${id}`}>
                     <a>{title}</a>
-                  </Link>  
+                  </Link>
                 </div>
 
                 <div className={styles.BlogPostDate}>
-                  <Date 
-                    dateString={date} 
+                  <Date
+                    dateString={date}
                      />
                 </div>
 
@@ -47,12 +47,12 @@ export default function Blog ({allPostsData}) {
         </ul>
       </article>
       <aside className={pageBtnStyles.BtnContainer}>
-        <Link 
-          href="/contact" 
+        <Link
+          href="/contact"
           scroll={false}>
-          <a 
-            className={pageBtnStyles.PrevPageBtn} 
-            onClick={backButtonClickedHandler}>Contact</a></Link>         
+          <a
+            className={pageBtnStyles.PrevPageBtn}
+            onClick={backButtonClickedHandler}>Contact</a></Link>
       </aside>
 
     </ContentLayout>

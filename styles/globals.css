@@ -1,7 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
 
-/* 
- * https://dev.to/hankchizljaw/a-modern-css-reset-6p3 
+/*
+ * https://dev.to/hankchizljaw/a-modern-css-reset-6p3
  */
 
 /* Box sizing rules */
@@ -371,7 +371,7 @@ a:hover::-moz-selection {
 
 blockquote {
   border-left: 4px solid #0B5D70;
-  padding: 0.75rem 0 0.125rem 2rem; 
+  padding: 0.75rem 0 0.125rem 2rem;
 }
 
 /* Form Styles */

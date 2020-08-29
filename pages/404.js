@@ -9,7 +9,7 @@ export default function Custom404() {
       <div className='container__main-content'>
         <h1>404 - Page Not Found</h1>
       </div>
-      <Link href="/"><a className={pageBtnStyles.PrevPageBtn}>Back to homepage</a></Link>   
+      <Link href="/"><a className={pageBtnStyles.PrevPageBtn}>Back to homepage</a></Link>
     </ContentLayout>
   )
 }
