@@ -2,6 +2,17 @@ import App from "next/app"
 import '../styles/globals.css'
 import { AnimatePresence } from "framer-motion"
 import StateContext from '../components/StateContext'
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+  gtmId: 'GTM-NX7CGQ6'
+}
+
+// https://stackoverflow.com/questions/60729564/next-js-react-gtm-module-referenceerror-document-is-not-defined
+// "Wrap the piece of TagManager initializer with a checker
+if (process.browser) {
+  TagManager.initialize(tagManagerArgs);
+}
 
 export default class MyApp extends App {
   state = {
